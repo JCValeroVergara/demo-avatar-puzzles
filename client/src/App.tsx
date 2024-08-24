@@ -1,8 +1,16 @@
+import { Route, Routes } from "react-router-dom";
+import { AvatarDemo, Home, Puzzle_01, Puzzle_02 } from "./pages";
+
+
 export default function App() {
     return (
-        <div className="text-3xl font-bold">
-            <h1>My App</h1>
-            <p>Welcome to my app!</p>
+        <div>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/puzzle-demo-01" element={<Puzzle_01 />} />
+                <Route path="/puzzle-demo-02" element={<Puzzle_02 />} />
+                <Route path="/avatar-demo" element={<AvatarDemo />} />
+            </Routes>
         </div>
     );
 }
