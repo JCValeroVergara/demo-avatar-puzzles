@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+    /* Aplicar overflow-x-hidden en modo portrait */
+    @media (orientation: portrait) {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+    }
+
+    /* Aplicar overflow-y-hidden en modo landscape */
+    @media (orientation: landscape) {
+        overflow-y: hidden;
+    }
+}
