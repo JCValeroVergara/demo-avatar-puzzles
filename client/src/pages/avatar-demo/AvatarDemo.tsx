@@ -1,8 +1,23 @@
-import { Navbar } from "../../components";
+import { useEffect, useState } from "react";
+import { Navbar, SpinnerGuau } from "../../components";
 
 export const AvatarDemo = () => {
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 1200);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <div className="portrait:hidden">
+            {isLoading ? (
+                <div className="w-screen h-screen flex justify-center items-center">
+                    <SpinnerGuau />
+                </div>
+            ) : (
             <div className="flex flex-col w-full h-screen">
                 <div className="w-full h-[7vh] flex flex-row items-center justify-center">
                     <Navbar />
@@ -11,6 +26,7 @@ export const AvatarDemo = () => {
                     <h1 className="text-[4vh]">Welcome to the Avatar Demo</h1>
                 </div>
             </div>
+            )}
         </div>
     );
 };

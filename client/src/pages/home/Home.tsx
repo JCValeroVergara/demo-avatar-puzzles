@@ -1,14 +1,28 @@
-import { Navbar } from "../../components";
+import { FC, useEffect, useState } from "react";
+import { Navbar, SpinnerGuau } from "../../components";
 import BGImage from "../../assets/home/world00_Lobby.png";
 import { Greetting } from "../../layouts";
 
 
 
-export const Home = () => {
+export const Home: FC = () => {
+    const [isLoading, setIsLoading] = useState(true);
     const showText = 'Bienvenido a esta demo de nuestra plataforma de juegos educativos.';
-    
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 1200);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <div className="portrait:hidden">
+            {isLoading ? (
+                <div className="w-screen h-screen flex justify-center items-center">
+                    <SpinnerGuau />
+                </div>
+            ) : (
             <div className="flex flex-col w-full h-screen">
                 <div className="w-full h-[6vh] flex flex-row items-center justify-center">
                     <Navbar />
@@ -27,6 +41,7 @@ export const Home = () => {
                     </div>
                 </div>
             </div>
+            )}
         </div>
     );
 };
