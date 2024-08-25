@@ -12,6 +12,10 @@ export default {
             colors: {
             primary: '#f72585',
             borderPrimary: '#cc2973',
+            textos: '#5e6470',
+            tablero: '#636D82',
+            tableroborder: '#bfbcbb',
+            tablerobg: '#454C5B',
             },
         },
     },
