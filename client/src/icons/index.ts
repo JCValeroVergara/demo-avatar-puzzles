@@ -1,4 +1,5 @@
 export { RigthTail } from "./tails/RigthTail";
+export { LeftTail } from "./tails/LeftTail";
 
 export { Guau_01 } from "./guau/Guau_01";
 export { Guau_02 } from "./guau/Guau_02";

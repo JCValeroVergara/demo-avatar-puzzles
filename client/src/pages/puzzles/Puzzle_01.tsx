@@ -1,4 +1,6 @@
 import { Navbar } from "../../components";
+import { Board_Puzzle_01 } from "../../layouts";
+import BGImage from "../../assets/puzzle_01/Pzz5_Bg_world05.png";
 
 export const Puzzle_01 = () => {
     return (
@@ -7,8 +9,14 @@ export const Puzzle_01 = () => {
                 <div className="w-full h-[7vh] flex flex-row items-center justify-center">
                     <Navbar />
                 </div>
-                <div className="mt-[1vh] w-full h-[94vh] flex flex-col justify-center items-center">
-                    <h1 className="text-[4vh]">Welcome to Puzzle 01</h1>
+                <div className="mt-[1vh] w-full h-[94vh] flex flex-col justify-center items-center"
+                style={{
+                    backgroundImage: `url(${BGImage})`,
+                    backgroundSize: '100% 95vh',
+                    backgroundRepeat: 'no-repeat',
+                }}                
+                >
+                    <Board_Puzzle_01 />
                 </div>
             </div>
         </div>
