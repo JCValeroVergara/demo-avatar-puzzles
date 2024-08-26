@@ -11,6 +11,7 @@ export const AvatarDemo = () => {
         return () => clearTimeout(timer);
     }, []);
 
+
     return (
         <div className="portrait:hidden">
             {isLoading ? (
