@@ -7,6 +7,7 @@ import { Greetting } from "../../layouts";
 
 export const Home: FC = () => {
     const [isLoading, setIsLoading] = useState(true);
+    console.log('isLoading:', isLoading);
     const showText = 'Bienvenido a esta demo de nuestra plataforma de juegos educativos.';
 
     useEffect(() => {
@@ -15,6 +16,7 @@ export const Home: FC = () => {
         }, 1200);
         return () => clearTimeout(timer);
     }, []);
+
 
     return (
         <div className="portrait:hidden">

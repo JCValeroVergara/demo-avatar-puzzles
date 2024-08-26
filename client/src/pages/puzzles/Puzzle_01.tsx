@@ -13,6 +13,7 @@ export const Puzzle_01 = () => {
         return () => clearTimeout(timer);
     }, []);
 
+
     return (
         <div className="portrait:hidden">
             {isLoading ? (
