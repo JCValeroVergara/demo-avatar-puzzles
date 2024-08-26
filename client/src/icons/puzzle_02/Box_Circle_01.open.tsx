@@ -1,6 +1,6 @@
 import { SVGProps } from "../../common/interfaces/SVgProps.interface";
 
-export const BoxCircle01Open =(props:SVGProps) => {
+export const Box_Circle_01_Open = (props:SVGProps) => {
     const { ...otherProps} = props;
     // const { width, height, className, style, color1, color2, color3, ...otherProps} = props;
 
