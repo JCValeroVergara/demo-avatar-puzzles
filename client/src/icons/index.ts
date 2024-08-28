@@ -10,6 +10,10 @@ export { Guau_06 } from "./guau/Guau_06";
 export { Guau_07 } from "./guau/Guau_07";
 export { Guau_08 } from "./guau/Guau_08";
 
+export { CloseX } from "./buttons/CloseX";
+export { CloseXClick } from "./buttons/CloseXClick";
+export { CloseXHover } from "./buttons/CloseXHover";
+
 export { Box_Circle_01_Open } from "./puzzle_02/Box_Circle_01.open";
 export { Box_Circle_01 } from "./puzzle_02/Box_Circle_01";
 export { Box_Square_01_Open } from "./puzzle_02/Box_Square_01.Open";

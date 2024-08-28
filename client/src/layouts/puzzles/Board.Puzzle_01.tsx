@@ -82,7 +82,7 @@ export const Board_Puzzle_01: FC = () => {
     
     return (
         <div className="w-full h-full flex flex-col items-start">
-            <div className="flex flex-row items-center justify-center w-full h-1/6 border bg-slate-500 bg-opacity-90 text-slate-50 text-4xl font-extrabold">
+            <div className="flex flex-row items-center justify-center w-full h-1/6 border bg-slate-500 bg-opacity-90 text-slate-50 text-[5vh] font-extrabold">
             <h1>Desafío Claustro de la Imaginación</h1>
             </div>
             <div className="w-[69vw] h-5/6 flex justify-center items-center">
@@ -94,7 +94,7 @@ export const Board_Puzzle_01: FC = () => {
                     <Frame_Puzzles_Guau />
                 </div>
             </div>
-            <div className="w-[30vw] h-[30vw] grid grid-cols-4 border-8 border-tablerobg">
+            <div className="w-[30vw] h-[30vw] grid grid-cols-4 border-[0.5vw] border-tablerobg">
                 {grid.map((row, rowIndex) =>
                 row.map((cell, collIndex) => (
                     <div
@@ -114,7 +114,7 @@ export const Board_Puzzle_01: FC = () => {
             </div>
             <div className="w-full h-1/6 flex justify-center items-center">
             <button
-                className="w-1/4 h-1/2 bg-slate-500 text-slate-50 text-xl font-bold rounded-lg"
+                className="w-1/4 h-1/2 bg-slate-500 text-slate-50 text-[3vh] font-bold rounded-lg"
                 onClick={shuffle}
             >
                 Barajar
