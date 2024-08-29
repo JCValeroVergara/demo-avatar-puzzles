@@ -25,6 +25,7 @@ export const LeftTail = (props:SVGProps) => {
                 style={{
                     fill: '#fff',
                     strokeWidth: 0,
+                    opacity: 0.9,
                 }}
                 />
             </g>
