@@ -48,3 +48,5 @@ export { Square_Puzzle_03_04 } from "./puzzle_02/Square_Puzzle_03_04";
 export { Square_Puzzle_03_05 } from "./puzzle_02/Square_Puzzle_03_05";
 export { Square_Puzzle_03_06 } from "./puzzle_02/Square_Puzzle_03_06";
 export { Square_Puzzle_03_07 } from "./puzzle_02/Square_Puzzle_03_07";
+
+export { StarGif } from "./global/StarGif";

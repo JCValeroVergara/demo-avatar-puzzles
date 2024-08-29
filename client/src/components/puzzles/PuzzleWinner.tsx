@@ -1,28 +1,13 @@
-import  { useContext, useEffect, useState } from 'react';
-import { AppContext } from '../../utils/context/Context';
-import { ButtonOptionNav, DialogBoxPuzzle, HabitsComfama, StarsBonus } from '..';
+import  { useEffect, useState } from 'react';
 import { CloseX, CloseXClick, CloseXHover, Guau_07 } from '../../icons';
-import { getPuzzleHabitText } from './functions/getPuzzleHabitText';
 import { PropsOptions } from '../../common/interfaces/components.interface';
+import { StarsBonus } from './StarsBonus';
+import { DialogBoxPuzzle } from './DialogBoxPuzzle';
+import { ButtonOptionNav } from '../common/ButtonOptionNav';
 
-const URL = import.meta.env.VITE_BACKEND_URL;
-
-const PuzzleWinner = (props: PropsOptions) => {
-    const { onClose, textBox, textWin } = props;
-
-    const { DataRegister } = useContext(AppContext);
-
-    const puzzles = DataRegister.puzzles;
-    const puzzle_Id = puzzles.puzzles_id;
-    
-    const puzzlePlayed = puzzles[puzzle];
-
-    const previousDatePlayed = puzzles[previousDate];
-
-    const puzzleHabitText = getPuzzleHabitText(puzzle);
-
+export const PuzzleWinner = (props: PropsOptions) => {
+    const { textBox, textWin, onClose } = props;
     const [isClickedClose, setIsClickedClose] = useState(false);
-    const [showHabit, setShowHabit] = useState(false)
     
     //Estado de la ventana modal
     const [showStarsBonus, setShowStarsBonus] = useState(false);
@@ -32,68 +17,22 @@ const PuzzleWinner = (props: PropsOptions) => {
     }, []);
 
     const handleShowStarsBonus = () => {
-        if (!puzzlePlayed) {
         setShowStarsBonus(true);
-        } 
     };
 
-    const handleUpdatePuzzle = async () => {
-        const token = sessionStorage.getItem('token');
-
-        //Actuliza la nueva Previous Date
-        let newPreviousDate;
-        if (puzzlePlayed) {
-        newPreviousDate = previousDatePlayed;
-        } else {
-        newPreviousDate = new Date().toISOString();
-        }
-
-    const response = await fetch(`${URL}/bonus/puzzles/${puzzle_Id}`, {
-    method: 'PATCH',
-    headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-    },
-    body: JSON.stringify({
-        [puzzle]: true,
-        [previousDate]: newPreviousDate,
-    }),
-    });
-    if (response.status === 200) {
-    await response.json();
-    }
-};
-
-const handleCloseShowStarsBonus = () => {
-    setShowStarsBonus(false);
-};
+    const handleCloseShowStarsBonus = () => {
+        setShowStarsBonus(false);
+    };
 
     const handleCloseClick = () => {
         setIsClickedClose(true);
-        handleUpdatePuzzle();
-        setShowHabit(true);
-    };
-
-    const handleCloseHabit = () => {
-        setShowHabit(false);
-        onClose();
-        setTimeout(() => {
-        window.location.reload();
-        }, 500);
+        if (onClose) onClose();
     };
 
     return (
         <>
         {showStarsBonus && (
             <StarsBonus onClose={handleCloseShowStarsBonus} prize={10} />
-        )}
-        {showHabit && (
-            <HabitsComfama
-            onClose={handleCloseHabit}
-            title="¡Felicitaciones!"
-            text={puzzleHabitText}
-            buttontext="Continuar"
-            />
         )}
         <section className="overflow-y-scroll flex flex-wrap fixed top-0 left-0 z-30 w-full h-full items-center justify-center bg-modal bg-opacity-30">
             <div className="relative w-1/2 h-[28vh] flex flex-col bg-tablero items-center justify-center rounded-[1vw] border-[0.2vw] border-tableroborder">
@@ -140,5 +79,3 @@ const handleCloseShowStarsBonus = () => {
         </>
     );
 };
-
-export default PuzzleWinner

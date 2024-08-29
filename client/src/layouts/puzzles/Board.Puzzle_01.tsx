@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { getImages } from "../../common/puzzles/imagen.utils";
-import { DialogBoxPuzzleInstructions, Frame_Puzzles_Guau } from "../../components";
+import { ButtonAssistant, DialogBoxPuzzleInstructions, Frame_Puzzles_Guau } from "../../components";
 
 type GridType = (number | string)[][];
 
@@ -113,12 +113,12 @@ export const Board_Puzzle_01: FC = () => {
             </div>
             </div>
             <div className="w-full h-1/6 flex justify-center items-center">
-            <button
-                className="w-1/4 h-1/2 bg-slate-500 text-slate-50 text-[3vh] font-bold rounded-lg"
-                onClick={shuffle}
-            >
-                Barajar
-            </button>
+                <div className="w-1/4 h-[8vh]">
+                    <ButtonAssistant
+                        onClick={shuffle}
+                        text="Barajar"
+                    />
+                </div>
             </div>
         </div>
     );
