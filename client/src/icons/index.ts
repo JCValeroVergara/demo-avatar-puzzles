@@ -1,3 +1,5 @@
+export * from './avatar'
+
 export { RigthTail } from "./tails/RigthTail";
 export { LeftTail } from "./tails/LeftTail";
 
