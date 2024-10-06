@@ -1,6 +1,7 @@
-import React from 'react';
+import { SVGProps } from '../../../common/interfaces';
 
-const FacialHair_04 = ({ color_03, color_04 }) => {
+export const FacialHair_04 = (props: SVGProps) => {
+  const { color3, color4, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,6 +9,7 @@ const FacialHair_04 = ({ color_03, color_04 }) => {
       data-name="Capa 2"
       viewBox="0 0 136 138"
       className="w-full h-full"
+      {...otherProps}
     >
       <defs>
         <style>
@@ -39,11 +41,11 @@ const FacialHair_04 = ({ color_03, color_04 }) => {
         <path d="M61.38 88.42s6.22 2.75 13.41 0" fill="#7384a0" />
         <path
           d="M42.62 55.77c-.56.52-.59 1.4-.06 1.96a1.389 1.389 0 0 0 1.96.07c2.99-2.8 10.8-2.21 12.12-1 .56.52 1.44.48 1.96-.08.52-.56.48-1.44-.08-1.96-2.35-2.16-11.69-2.91-15.88 1.02ZM92.87 55.77c-4.19-3.92-13.54-3.17-15.88-1.02-.56.52-.6 1.39-.08 1.96.52.56 1.39.6 1.96.08 1.32-1.21 9.13-1.8 12.12 1a1.389 1.389 0 0 0 1.96-.07c.52-.56.49-1.43-.07-1.96Z"
-          fill={color_04}
+          fill={color4}
         />
         <path
           d="M101.67 68.34c0 24.16-13.8 43.75-33.43 43.75S34.51 92.5 34.51 68.34"
-          fill='none'
+          fill="none"
         />
         <path
           d="M28.45 73.27c.37-2.46 5.41-3.48 6.45 2.08M107.69 73.27c-.37-2.46-5.41-3.48-6.45 2.08"
@@ -52,7 +54,7 @@ const FacialHair_04 = ({ color_03, color_04 }) => {
         <path
           d="M73.34 112.66c.1-.11.14-.26.13-.41-.16-1.74-1.3-13.4-2.38-14.17-.66-.48-5.13-.73-6.01 0-1.02.83-2.2 12.43-2.38 14.17-.01.15.03.29.13.4.42.49 1.76 1.79 4.35 2.08.23.04.49.06.8.06h.22c.34 0 .62-.02.85-.07 2.55-.3 3.87-1.58 4.29-2.07Z"
           style={{
-            fill: color_03,
+            fill: color3,
             strokeWidth: 0,
           }}
         />
@@ -75,5 +77,3 @@ const FacialHair_04 = ({ color_03, color_04 }) => {
     </svg>
   );
 };
-
-export default FacialHair_04;

@@ -1,13 +1,14 @@
-import React from "react";
+import { SVGProps } from '../../../common/interfaces';
 
-const Accesories_02 = ({color,...props}) => {
+export const Accesories_02 = (props: SVGProps) => {
+  const { color, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       data-name="Capa 2"
       className="w-full h-full"
       viewBox="0 0 136 138"
-      {...props}
+      {...otherProps}
     >
       <g data-name={1}>
         <path
@@ -21,12 +22,11 @@ const Accesories_02 = ({color,...props}) => {
           d="M123 138H13c-7.17 0-13-5.83-13-13V13C0 5.83 5.83 0 13 0h110c7.17 0 13 5.83 13 13v112c0 7.17-5.83 13-13 13ZM13 2C6.93 2 2 6.93 2 13v112c0 6.07 4.93 11 11 11h110c6.07 0 11-4.93 11-11V13c0-6.07-4.93-11-11-11H13Z"
           style={{
             strokeWidth: 0,
-            fill: "#b2bed3",
+            fill: '#b2bed3',
           }}
         />
       </g>
     </svg>
   );
-}
+};
 
-export default Accesories_02;

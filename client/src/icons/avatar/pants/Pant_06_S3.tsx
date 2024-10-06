@@ -1,13 +1,14 @@
-import React from 'react';
+import { SVGProps } from '../../../common/interfaces';
 
-const Pant_06_S3  = ({ color, color2, ...props }) => {
+export const Pant_06_S3 = (props: SVGProps) => {
+  const { color, color2, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className='w-full h-full'
+      className="w-full h-full"
       data-name="Capa 2"
       viewBox="0 0 136 138"
-      {...props}
+      {...otherProps}
     >
       <path
         d="M123 138H13a13 13 0 0 1-13-13V13A13 13 0 0 1 13 0h110a13 13 0 0 1 13 13v112a13 13 0 0 1-13 13ZM13 2A11 11 0 0 0 2 13v112a11 11 0 0 0 11 11h110a11 11 0 0 0 11-11V13a11 11 0 0 0-11-11Z"
@@ -30,5 +31,3 @@ const Pant_06_S3  = ({ color, color2, ...props }) => {
     </svg>
   );
 };
-
-export default Pant_06_S3;
