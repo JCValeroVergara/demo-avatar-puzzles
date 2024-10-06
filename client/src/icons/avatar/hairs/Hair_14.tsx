@@ -1,6 +1,6 @@
 import { SVGProps } from '../../../common/interfaces';
 
-export const Hair_13 = (props: SVGProps) => {
+export const Hair_14 = (props: SVGProps) => {
   const { color, color2, ...otherProps } = props;
   return (
     <svg
