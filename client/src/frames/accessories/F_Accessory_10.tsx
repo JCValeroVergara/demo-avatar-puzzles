@@ -1,6 +1,6 @@
-import { SVGProps } from '../../common/interfaces/SVgProps.interface';
+import { SVGProps } from '../../common/interfaces';
 
-const F_Accessory10 = (props: SVGProps) => {
+export const F_Accessory10 = (props: SVGProps) => {
   const { color, ...otherProps } = props;
   return (
     <svg
@@ -20,6 +20,3 @@ const F_Accessory10 = (props: SVGProps) => {
     </svg>
   );
 }
-
-
-export default F_Accessory10;

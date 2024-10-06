@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ArrowPrevious } from '../../icons';
 import { PropsOptions } from '../../common/interfaces';
 
-const ButtonPrev = (props: PropsOptions) => {
+export const ButtonPrev = (props: PropsOptions) => {
   const { onClick } = props;
   const [isHovered, setIsHovered] = useState(false);
 
@@ -33,5 +33,3 @@ const ButtonPrev = (props: PropsOptions) => {
     </button>
   );
 };
-
-export default ButtonPrev;

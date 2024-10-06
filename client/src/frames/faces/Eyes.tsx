@@ -1,7 +1,7 @@
-import { SVGProps } from '../../common/interfaces/SVgProps.interface';
+import { SVGProps } from '../../common/interfaces';
 
 
-const Eyes = (props: SVGProps) => {
+export const Eyes = (props: SVGProps) => {
   const { color, ...otherProps } = props;
   return (
     <svg
@@ -21,4 +21,3 @@ const Eyes = (props: SVGProps) => {
   );
 }
 
-export default Eyes;

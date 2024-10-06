@@ -1,6 +1,7 @@
-import React from 'react';
+import { SVGProps } from '../../common/interfaces';
 
-const F_Shirt_04 = ({ color, color2, ...props }) => {
+export const F_Shirt_04 = (props: SVGProps) => {
+  const { color, color2, ...otherProps } = props;
 
   return (
     <svg
@@ -8,7 +9,7 @@ const F_Shirt_04 = ({ color, color2, ...props }) => {
       id="_1"
       data-name={1}
       viewBox="0 0 680 855"
-      {...props}
+      {...otherProps}
     >
       <defs>
         <style>{'.cls-1{fill:#222428;stroke-width:0}'}</style>
@@ -30,5 +31,3 @@ const F_Shirt_04 = ({ color, color2, ...props }) => {
     </svg>
   );
 };
-
-export default F_Shirt_04;

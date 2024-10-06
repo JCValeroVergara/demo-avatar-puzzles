@@ -1,7 +1,8 @@
-import React from 'react';
+import { SVGProps } from '../../../common/interfaces';
 
-const Pant_03 = ({ color, color2, color3, color4, ...props }) => {
-  
+export const Pant_03 = (props: SVGProps) => {
+  const { color, color2, color3, color4, ...otherProps } = props;
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +10,7 @@ const Pant_03 = ({ color, color2, color3, color4, ...props }) => {
       data-name="Capa 2"
       className="w-full h-full"
       viewBox="0 0 136 138"
-      {...props}
+      {...otherProps}
     >
       <defs>
         <style>
@@ -50,5 +51,3 @@ const Pant_03 = ({ color, color2, color3, color4, ...props }) => {
     </svg>
   );
 };
-
-export default Pant_03;

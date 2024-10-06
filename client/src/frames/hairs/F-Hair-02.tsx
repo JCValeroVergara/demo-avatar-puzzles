@@ -1,6 +1,6 @@
-import { SVGProps } from '../../common/interfaces/SVgProps.interface';
+import { SVGProps } from '../../common/interfaces';
 
-const F_Hair02 = (props: SVGProps) => {
+export const F_Hair02 = (props: SVGProps) => {
   const { color, ...otherProps } = props;
   return (
     <svg
@@ -20,4 +20,3 @@ const F_Hair02 = (props: SVGProps) => {
   );
 };
 
-export default F_Hair02;

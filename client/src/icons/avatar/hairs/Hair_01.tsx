@@ -1,11 +1,13 @@
-import React from 'react';
+import { SVGProps } from '../../../common/interfaces';
 
-const Hair_01 = ({ colorHair, colorHair_2 }) => {
+export const Hair_01 = (props: SVGProps) => {
+  const { color, color2, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 136 138"
       className="w-full h-full"
+      {...otherProps}
     >
       <g fill="none" strokeMiterlimit="10">
         <path
@@ -39,7 +41,7 @@ const Hair_01 = ({ colorHair, colorHair_2 }) => {
         />
         <path
           d="M57.57 59.56c-1.87-1.72-10.46-2.31-14 1.01M77.93 59.56c1.87-1.72 10.46-2.31 14 1.01"
-          stroke={colorHair_2}
+          stroke={color2}
           strokeWidth="2.77"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -60,5 +62,3 @@ const Hair_01 = ({ colorHair, colorHair_2 }) => {
   );
 };
 
-
-export default Hair_01;

@@ -1,4 +1,4 @@
-import { SVGProps } from '../../common/interfaces/SVgProps.interface';
+import { SVGProps } from '../../common/interfaces';
 
 const F_Accessory05 = (props: SVGProps) => {
   const { color, ...otherProps } = props;

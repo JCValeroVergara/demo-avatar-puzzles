@@ -1,7 +1,8 @@
-import React from 'react';
+import { SVGProps } from '../../../common/interfaces';
 
-const FacialHair_01 = ({ color_03, color_04, props }) => {
- 
+export const FacialHair_01 = (props: SVGProps) => {
+  const { color4, ...otherProps } = props;
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +10,7 @@ const FacialHair_01 = ({ color_03, color_04, props }) => {
       className="w-full h-full"
       data-name="Capa 2"
       viewBox="0 0 136 138"
-      {...props}
+      {...otherProps}
     >
       <defs>
         <style>
@@ -38,7 +39,7 @@ const FacialHair_01 = ({ color_03, color_04, props }) => {
         />
         <path
           d="M42.62 55.77c-.56.52-.59 1.4-.06 1.96a1.389 1.389 0 0 0 1.96.07c2.99-2.8 10.8-2.21 12.12-1 .56.52 1.44.48 1.96-.08.52-.56.48-1.44-.08-1.96-2.35-2.16-11.69-2.91-15.88 1.02ZM92.87 55.77c-4.19-3.92-13.54-3.17-15.88-1.02-.56.52-.6 1.39-.08 1.96.52.56 1.39.6 1.96.08 1.32-1.21 9.13-1.8 12.12 1a1.389 1.389 0 0 0 1.96-.07c.52-.56.49-1.43-.07-1.96Z"
-          fill={color_04}
+          fill={color4}
         />
         <path
           d="M123 138H13c-7.17 0-13-5.83-13-13V13C0 5.83 5.83 0 13 0h110c7.17 0 13 5.83 13 13v112c0 7.17-5.83 13-13 13ZM13 2C6.93 2 2 6.93 2 13v112c0 6.07 4.93 11 11 11h110c6.07 0 11-4.93 11-11V13c0-6.07-4.93-11-11-11H13Z"
@@ -50,6 +51,5 @@ const FacialHair_01 = ({ color_03, color_04, props }) => {
       </g>
     </svg>
   );
-}
+};
 
-export default FacialHair_01;

@@ -1,18 +1,34 @@
-import { useContext, useState } from 'react';
-import { ButtonOptionNav } from '../../components';
-import { AvatarContext } from '../../common/context/AvatarContext';
+import { useState } from 'react';
+import { ButtonNext, ButtonOptionNav, ButtonPrev } from '../../components';
+// import { AvatarContext } from '../../common/context/AvatarContext';
 import { CloseX, CloseXClick, CloseXHover } from '../../icons';
 
 
 export const ContainerAvatar = () => {
-    const { avatarState, setAvatarState } = useContext(AvatarContext);
-    const { ActiveForm, setActiveForm } = useContext(AvatarContext);
+    // const { avatarState, setAvatarState } = useContext(AvatarContext);
+    // const { ActiveForm, setActiveForm } = useContext(AvatarContext);
     const [FormRender, setFormRender] = useState('CustomBody');
     const [ isClickedClose, setIsClickedClose ] = useState(false);
 
     const handleCloseClick = () => {
       setIsClickedClose(true);
-    };
+  };
+  
+  const handleNextClick = () => {
+    if (FormRender === 'CustomBody') {
+      setFormRender('CustomWardrobe');
+    } else if (FormRender === 'CustomWardrobe') {
+      setFormRender('CustomBody');
+    }
+  }
+
+  const handlePrevClick = () => {
+    if (FormRender === 'CustomWardrobe') {
+      setFormRender('CustomBody');
+    } else if (FormRender === 'CustomBody') {
+      setFormRender('CustomWardrobe');
+    }
+  }
 
     return (
       <>
@@ -21,7 +37,7 @@ export const ContainerAvatar = () => {
             <div className="w-full h-full flex flex-col border-[0.2vw] border-tableroborder items-center rounded-[0.7vw] relative bg-tablero">
               <div className="flex items-center justify-center w-full h-full">
                 <div className="relative w-2/5 h-full">
-                  <Avatar />
+                  {/* <Avatar /> */}
                   <div className="flex flex-row items-center w-full absolute md:bottom-6 bottom-1 px-4 md:px-8 z-50">
                     <div className="mr-auto">
                       <div className="w-[3vw] h-[3vw] flex justify-star items-center p-[0.2vw]">

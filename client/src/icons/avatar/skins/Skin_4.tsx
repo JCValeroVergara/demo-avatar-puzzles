@@ -1,6 +1,6 @@
-import React from 'react';
 
-const Skin4 = () => {
+
+export const Skin_4 = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -41,5 +41,3 @@ const Skin4 = () => {
     </svg>
   );
 }
-
-export default Skin4;
