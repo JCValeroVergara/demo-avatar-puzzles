@@ -1,5 +1,4 @@
-import { SVGProps } from '../../common/interfaces/SVgProps.interface';
-
+import { SVGProps } from '../../common/interfaces';
 
 
 export const F_Beard01 = (props: SVGProps) => {

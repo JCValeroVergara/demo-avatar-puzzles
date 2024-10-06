@@ -1,22 +1,22 @@
-import React from 'react';
+import { SVGProps } from '../../common/interfaces';
 
-const F_Hair26_S3 = ({ fill, ...props }) => {
+export const F_Hair_26_S3 = (props: SVGProps) => {
+  const { color, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       data-name="Capa 1"
-      className='w-full h-full'
+      className="w-full h-full"
       viewBox="0 0 680 855"
-      {...props}
+      {...otherProps}
     >
       <path
         d="M341.78 373.89c-25-1.25-57.07 17.13-49.07 66.92 0 0 3.15-.05 5.51 3.68a.29.29 0 0 0 .54-.17 37.5 37.5 0 0 1 2.72-16.54 20.51 20.51 0 0 0 1.07 8.92s12.53-3.54 14.49-3.54c0 0-3.31-14.44 3.7-21.46 0 0 0 12.38 2.8 20.24 0 0 10.22-1.54 16.8-2 0 0 .43-15.72 3.14-25 0 0 1.62 17.86.64 24.48l5.46.42a31.29 31.29 0 0 0 2.24-6.3 32.73 32.73 0 0 1 0 6.58l6.16 1.4s5-12 5.88-19.18c0 0-.46 17.57-1.86 20l14 5.62a.53.53 0 0 0 .69-.28 28.35 28.35 0 0 0 1.58-13.81s2.56 10.34 3.82 14.54c.63 2.1 1.25 4.49 1.72 6.37a.61.61 0 0 0 1.17 0c.55-2 1.87-3.6 5-3.68-.04-.02 16.79-63.96-48.2-67.21Z"
         style={{
-          fill: fill,
+          fill: color,
         }}
       />
     </svg>
   );
 };
 
-export default F_Hair26_S3;

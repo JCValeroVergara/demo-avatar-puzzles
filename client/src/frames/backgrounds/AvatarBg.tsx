@@ -1,7 +1,7 @@
-import { SVGProps } from '../../common/interfaces/SVgProps.interface';
+import { SVGProps } from '../../common/interfaces';
 
 
-const AvatarBg = (props: SVGProps) => {
+export const AvatarBg = (props: SVGProps) => {
   const { ...otherProps } = props;
   return (
     <svg
@@ -641,6 +641,3 @@ const AvatarBg = (props: SVGProps) => {
     </svg>
   );
 };
-
-
-export default AvatarBg;

@@ -1,13 +1,14 @@
-import React from 'react';
+import { SVGProps } from '../../common/interfaces';
 
-const F_Pant_04 = ({ color, color2, ...props }) => {
+export const F_Pant_04 = (props: SVGProps) => {
+  const { color, color2, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       id="_1"
       data-name={1}
       viewBox="0 0 680 855"
-      {...props}
+      {...otherProps}
     >
       <defs>
         <style>{'.cls-2{stroke-width:0;fill:#5b5b5b}'}</style>
@@ -37,4 +38,3 @@ const F_Pant_04 = ({ color, color2, ...props }) => {
   );
 };
 
-export default F_Pant_04;
