@@ -1,6 +1,6 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { ButtonNext, ButtonOptionNav, ButtonPrev } from '../../components';
-import { AvatarContext } from '../../common/context/AvatarContext';
+// import { AvatarContext } from '../../common/context/AvatarContext';
 import { CloseX, CloseXClick, CloseXHover } from '../../icons';
 
 
