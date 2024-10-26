@@ -1,6 +1,7 @@
 
 export interface PropsOptions {
     buttontext?: string;
+    color?: string;
     cell?: string;
     children?: (isHover: boolean) => JSX.Element;
     disabled?: boolean;
