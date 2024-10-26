@@ -1,5 +1,6 @@
 export * from './AvatarAccesories';
 export * from './AvatarBeard';
+export * from './AvatarBrownChild';
 export * from './AvatarEyes';
 export * from './AvatarFace';
 export * from './AvatarHair';
