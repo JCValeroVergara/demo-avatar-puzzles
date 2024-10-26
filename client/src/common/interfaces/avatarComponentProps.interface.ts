@@ -14,6 +14,10 @@ export interface AvatarBeardProps {
     colors: ColorHair;
 }
 
+export interface AvatarBrownChildrenProps {
+    color: string;
+}
+
 export interface AvatarEyesProps {
     eyeColor: string;
     silhoutte: string;
