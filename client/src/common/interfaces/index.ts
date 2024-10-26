@@ -1,3 +1,4 @@
+export * from './avatarComponentProps.interface';
 export * from './avatarDetails.interface';
 export * from './avatarProvider.interface';
 export * from './avatarState.interface';
