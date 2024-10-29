@@ -1,6 +1,6 @@
 //Botton para el menu de la navbar con hover, recibe 3 svg según el estado del menu
 import { useState } from 'react';
-import { PropsOptions } from '../../common/interfaces/components.interface';
+import { PropsOptions } from '../../common/interfaces';
 
 export const ButtonOptionNav = (props: PropsOptions) => {
     const { onClick, children, disabled } = props;
