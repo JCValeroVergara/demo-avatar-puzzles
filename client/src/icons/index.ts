@@ -1,4 +1,5 @@
 export * from './avatar'
+export * from './avatarCustom';
 export * from './buttons';
 export * from './global';
 export * from './guau';

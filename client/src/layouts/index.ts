@@ -1,3 +1,4 @@
 export * from "./avatar";
-export * from "./home/Greetting";
+export * from "./avatarSelect";
+export * from "./home";
 export * from "./puzzles";
