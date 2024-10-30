@@ -7,7 +7,6 @@ import { Greetting } from "../../layouts";
 
 export const Home: FC = () => {
     const [isLoading, setIsLoading] = useState(true);
-    console.log('isLoading:', isLoading);
     const showText = 'Bienvenido a esta demo de nuestra plataforma de juegos educativos.';
 
     useEffect(() => {

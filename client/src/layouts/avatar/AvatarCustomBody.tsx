@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { AvatarContext } from '../../common';
 import { LineDivision } from '../../components';
-import { SelectEyesColors, SelectSilhouette, SelectSkinColors } from '../avatarSelect';
+import { SelectEyesColors, SelectFacialHairType, SelectHairColors, SelectHairType, SelectSilhouette, SelectSkinColors } from '../avatarSelect';
 
 
 export const AvatarCustomBody = () => {
@@ -76,38 +76,38 @@ export const AvatarCustomBody = () => {
             {/* //_______________________________________________________________________________________ */}
             <div className="w-full my-[4vh]">
                 <div className="w-full flex items-center mb-[1vh]">
-                <LineDivision content="Tono de piel" />
+                    <LineDivision content="Tono de piel" />
                 </div>
                 <SelectSkinColors />
             </div>
             {/* //_______________________________________________________________________________________ */}
             <div className="w-full mb-[4vh]">
                 <div className="w-full flex items-center mb-[1vh]">
-                <LineDivision content="Color de ojos" />
+                    <LineDivision content="Color de ojos" />
                 </div>
                 <SelectEyesColors />
             </div>
             {/* //_______________________________________________________________________________________ */}
             <div className="w-full mb-[4vh]">
                 <div className="w-full flex items-center mb-[1vh]">
-                <LineDivision content="Color de pelo" />
+                    <LineDivision content="Color de pelo" />
                 </div>
-                {/* <SelectHairColors /> */}
+                <SelectHairColors />
             </div>
             {/* //_______________________________________________________________________________________ */}
             <div className="w-full mb-[4vh]">
                 <div className="w-full flex items-center mb-[1vh]">
-                <LineDivision content="Tipos de cabello" />
+                    <LineDivision content="Tipos de cabello" />
                 </div>
-                {/* <HairType /> */}
+                <SelectHairType />
             </div>
             {/* //_______________________________________________________________________________________ */}
-            {ActiveForm !== 'UpdateAvatarChild' && (
+            {ActiveForm !== 'customAvatarChildren' && (
                 <div className="w-full mb-[4vh]">
                 <div className="w-full flex items-center mb-[1vh]">
                     <LineDivision content="Vello facial" />
                 </div>
-                {/* <FacialHairType /> */}
+                <SelectFacialHairType />
                 </div>
             )}
             {/* //_______________________________________________________________________________________ */}

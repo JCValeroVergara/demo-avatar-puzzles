@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { AvatarContext } from '../../common';
 import { LineDivision } from '../../components';
 import { IconGlasses, IconPant, IconShirt, IconShoes } from '../../icons';
+import { SelectAccessories, SelectAccessoriesColor, SelectPant, SelectPantColor, SelectShirt, SelectShirtColor, SelectShoes, SelectShoesColor } from '../avatarSelect';
 
 
 export const AvatarCustomWardrobe = () => {
@@ -67,42 +68,42 @@ export const AvatarCustomWardrobe = () => {
             {/* //_______________________________________________________________________________________ */}
             <div className="w-full my-[4vh]">
                 <div className="w-full flex items-center mb-[1vh]">
-                <LineDivision
-                    content={<IconShirt className="w-[4vw] h-[4vw]" />}
-                />
+                    <LineDivision
+                        content={<IconShirt className="w-[4vw] h-[4vw]" />}
+                    />
                 </div>
-                {/* <SelectShirtColor />
-                <SelectShirt /> */}
+                <SelectShirtColor />
+                <SelectShirt />
             </div>
             {/* //_______________________________________________________________________________________ */}
             <div className="w-full my-[4vh]">
                 <div className="w-full flex items-center mb-[1vh]">
-                <LineDivision
-                    content={<IconPant className="w-[4vw] h-[4vw]" />}
-                />
+                    <LineDivision
+                        content={<IconPant className="w-[4vw] h-[4vw]" />}
+                    />
                 </div>
-                {/* <SelectPantColor />
-                <SelectPant /> */}
+                <SelectPantColor />
+                <SelectPant />
             </div>
             {/* //_______________________________________________________________________________________ */}
             <div className="w-full my-[4vh]">
                 <div className="w-full flex items-center mb-[1vh]">
-                <LineDivision
-                    content={<IconShoes className="w-[4vw] h-[4vw]" />}
-                />
+                    <LineDivision
+                        content={<IconShoes className="w-[4vw] h-[4vw]" />}
+                    />
                 </div>
-                {/* <SelectShoesColor />
-                <SelectShoes /> */}
+                <SelectShoesColor />
+                <SelectShoes />
             </div>
             {/* //_______________________________________________________________________________________ */}
             <div className="w-full my-[4vh]">
                 <div className="w-full flex items-center mb-[1vh]">
-                <LineDivision
-                    content={<IconGlasses className="w-[4vw] h-[4vw]" />}
-                />
+                    <LineDivision
+                        content={<IconGlasses className="w-[4vw] h-[4vw]" />}
+                    />
                 </div>
-                {/* <SelectAccessoriesColor />
-                <SelectAccessories /> */}
+                <SelectAccessoriesColor />
+                <SelectAccessories />
             </div>
             {/* //_______________________________________________________________________________________ */}
             </div>

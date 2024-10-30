@@ -16,7 +16,7 @@ export const ContainerAvatar = () => {
     }
 
     const { ActiveForm, setActiveForm } = context;
-    console.log(ActiveForm);
+    
     // const { avatarState, setAvatarState } = useContext(AvatarContext);
     // const { ActiveForm, setActiveForm } = useContext(AvatarContext);
     const [FormRender, setFormRender] = useState('CustomBody');
