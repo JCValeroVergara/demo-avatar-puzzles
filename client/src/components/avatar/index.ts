@@ -1,4 +1,5 @@
 export * from './AvatarAccesories';
+export * from './AvatarBackground';
 export * from './AvatarBeard';
 export * from './AvatarBrownChild';
 export * from './AvatarEyes';

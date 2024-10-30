@@ -4,7 +4,6 @@ import BGImage from "../../assets/home/world00_Lobby.png";
 import { Greetting } from "../../layouts";
 
 
-
 export const Home: FC = () => {
     const [isLoading, setIsLoading] = useState(true);
     const showText = 'Bienvenido a esta demo de nuestra plataforma de juegos educativos.';
