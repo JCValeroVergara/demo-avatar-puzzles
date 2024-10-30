@@ -13,7 +13,6 @@ export const AvatarDemo = () => {
     }
 
     const { ActiveForm, setActiveForm } = context;
-    console.log(ActiveForm);
 
     const [isLoading, setIsLoading] = useState(true);
 

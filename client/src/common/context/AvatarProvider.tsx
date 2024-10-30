@@ -65,10 +65,7 @@ export const AvatarProvider = ({ children }: AvatarProviderProps) => {
         avatar_Small: initialAvatar_Small_State,
         wardrobe_Small: initialWardrobe_Small_State,
         });
-    };    
-
-    console.log('AvatarState:', avatarState);
-    console.log('ActiveForm:', ActiveForm);
+    };
 
     return (
         <AvatarContext.Provider value={{ avatarState, setAvatarState, ActiveForm, setActiveForm, ResetAvatar }}>
