@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { ButtonNext, ButtonOptionNav, ButtonPrev } from '../../components';
+import { AvatarBackground, ButtonNext, ButtonOptionNav, ButtonPrev } from '../../components';
 import { CloseX, CloseXClick, CloseXHover } from '../../icons';
 import { AvatarContext } from '../../common';
 import { Avatar } from './Avatar';
@@ -50,8 +50,9 @@ export const ContainerAvatar = () => {
                     <div className="w-full h-full flex flex-col border-[0.2vw] border-tableroborder items-center rounded-[0.7vw] relative bg-tablero">
                         <div className="flex items-center justify-center w-full h-full">
                             <div className="relative w-2/5 h-full">
-                            { ActiveForm === 'customAvatar' && <Avatar /> }
-                            { ActiveForm === 'customAvatarChildren' && <AvatarChild /> }
+                                <AvatarBackground />
+                                { ActiveForm === 'customAvatar' && <Avatar /> }
+                                { ActiveForm === 'customAvatarChildren' && <AvatarChild /> }
                             <div className="flex flex-row items-center w-full absolute md:bottom-6 bottom-1 px-4 md:px-8 z-50">
                                 <div className="mr-auto">
                                 <div className="w-[3vw] h-[3vw] flex justify-star items-center p-[0.2vw]">

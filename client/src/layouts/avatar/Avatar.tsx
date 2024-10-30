@@ -11,7 +11,7 @@ export const Avatar = () => {
         return <div>Error: AvatarContext no está disponible</div>;
     }
     
-    const { avatarState } = context
+    const { avatarState} = context
     
 
     const avatar = avatarState.avatar
@@ -52,6 +52,7 @@ export const Avatar = () => {
 
     return (
         <div className='w-full h-full'>
+            
             {/* Piel */}
             <AvatarSkins skinColor={skinColor} skinLine={colorSkin} silhoutte={Silhouette} />
                 

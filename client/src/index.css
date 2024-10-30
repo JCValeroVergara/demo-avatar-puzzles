@@ -17,3 +17,27 @@ body {
         overflow-y: hidden;
     }
 }
+
+/* Estilos de la barra de desplazamiento */
+
+/* Custon scrollbar vertical */
+custom-scrollbar-y {
+  scrollbar-width: auto; /* Firefox */
+  scrollbar-color: #b2bed3 #4a535e; /* thumb color | track color */
+}
+
+.custom-scrollbar-y::-webkit-scrollbar {
+  width: 1vw; /* Ancho de la barra de desplazamiento */
+  height: 1vw; /* Altura de la barra de desplazamiento (horizontal) */
+}
+
+.custom-scrollbar-y::-webkit-scrollbar-track {
+  background: #4a535e; /* Color del track */
+  border-radius: 1vw; /* Redondeo del track */
+}
+
+.custom-scrollbar-y::-webkit-scrollbar-thumb {
+  background-color: #b2bed3; /* Color del pulgar */
+  border-radius: 0.5vw; /* Redondeo del pulgar */
+  border: 0.2vw solid #4a535e; /* Opcional: añade un borde */
+}

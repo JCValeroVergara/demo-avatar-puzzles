@@ -5,3 +5,4 @@ export * from './global';
 export * from './guau';
 export * from './puzzle_02';
 export * from './tails';
+export * from './UX';
